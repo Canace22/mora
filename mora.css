@@ -1,0 +1,93 @@
+/*背景样式*/
+body{
+	background-color: orange;
+	margin: 0;
+	padding: 0;
+}
+
+.header h3{
+	display: flex;
+	justify-content: center;
+}
+
+/* 内容自适应*/
+.content{
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	padding-bottom: 20px;
+	margin: 0;
+}
+
+/*图片包裹层，去除ul前面的小圆点，使包裹层内的项目水平分布*/
+.chooseImg{
+	list-style: none;
+	padding: 0;
+	display: flex;
+	justify-content:space-around;
+	align-content: center;
+}
+
+/*图片包裹层，使图片有一定的间隔*/
+.chooseImg li{
+	margin: 0;
+}
+
+.chooseImg li:hover{
+	z-index: 200px;
+	opacity: 0.8;
+	background: #000;
+	border:1px solid #fff;
+}
+
+/*图片自适应*/
+.chooseImg li img{
+	width: 100%;
+	height: 100%;
+}
+
+/*用户点击的图片显示区、统计结果显示区、随机图片显示区水平居中分布*/
+.showResult{
+	display: flex;
+	justify-content: space-around;
+	align-content: center;
+}
+
+/*图片自适应*/
+.showResult img{
+		max-width: 100%;
+	}
+
+/*显示区的图片，结果自适应，文字居中*/
+.showResult>.chooseImgRes,
+.showResult>.statisticRes,
+.showResult>.computerImg{
+	text-align: center;
+}
+
+/*游戏介绍对齐分布*/
+.gameIntro{
+	font-size: 12px;
+}
+
+/*大于700视口下游戏介绍内容右对齐*/
+@media screen and (min-width: 43.75rem){
+	.gameIntro{
+		display: flex;
+		justify-content: flex-end;
+		font-size: 12px;
+	}
+}
+
+.gameIntro .bold{
+	font-weight: bold;
+	font-size: 14px;
+}
+
+/*页脚固定*/
+.footer{
+	position: fixed;
+	bottom: 0;
+	text-align: center;
+	width: 100%;
+}
