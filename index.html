@@ -5,11 +5,17 @@
     <meta charset="utf-8">
     <title>猜拳游戏</title>
     <meta name="viewport" content="width=device-width">
+    <!--这个也是iphone私有标签，允许全屏浏览。-->
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <!--iphone的私有标签，iphone顶端状态条的样式。-->
+    <meta content="orange" name="apple-mobile-web-app-status-bar-style">
+    <!--禁止数字自动识别为电话号码，这个比较有用，因为一串数字在iphone上会显示成蓝色，样式加成别的颜色也是不生效的。-->
+    <meta content="telephone=no" name="format-detection">
     <link rel="stylesheet" type="text/css" href="mora.css">
     <script type="text/javascript" src="mora.js"></script>
 </head>
 
-<body onclick="mora()">
+<body onload="mora()">
     <!--游戏标题-->
     <div class="header">
         <h3>出拳吧，骚年！ </h3>
@@ -51,12 +57,13 @@
             </div>
         </div>
         <!--显示游戏说明-->
-        <div class="gameIntro">
-        	<div class="gameIntroWrapper">
-        		<span class="bold">游戏说明:</span>
-        		<p>1.点击上面三个不同的图标进行您的选择；</p>
-            	<p>2.重来请点击“再来一次”</p>
-        	</div>
+        <div id="info" class="gameIntro">
+            <div class="gameIntroWrapper">
+                <h1 class="bold">游戏说明</h1>
+                <p class="text">点击石头、剪刀、布， 开始您的游戏吧！</p>
+                <!-- <p>2.重来请点击“再来一次”</p> -->
+            </div>
+            <span id="close" class="close">x</span>
         </div>
     </div>
     <div class="footer">
